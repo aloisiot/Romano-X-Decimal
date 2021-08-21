@@ -4,16 +4,16 @@ public final class App {
 
     public static void main(String[] args) throws Exception {
 
-        int decimal;
+        int integer;
 
         System.out.println("\nDigite um número entre 1 e 3999 para que seja convertido em algarismos romano.\n");
         
         Scanner scanner = new Scanner(System.in);
-        decimal=scanner.nextInt();
+        integer=scanner.nextInt();
         scanner.close();
 
-        String result = Converter.toRoman(decimal);
+        String result = Converter.toRoman(integer);
 
-        System.out.printf("O decimal " + decimal +" convertico para algarismos romanos resulta em: " + result + "\n\n");
+        System.out.printf("O integer " + integer +" convertico para algarismos romanos resulta em: " + result + "\n\n");
     }
 }

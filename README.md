@@ -1,2 +1,3 @@
-# Romano-X-Decimal
- Converção Romano X Decimal
+# Inteiro para Algarismos Romanos
+
+## Programa para converção de número inteiro em algarismos romanos

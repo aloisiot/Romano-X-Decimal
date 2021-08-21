@@ -5,9 +5,9 @@ public final class Converter {
 
     private static List<String[]> romansLists = Romans.elements();
 
-    public static String toRoman(int decimal) {
+    public static String toRoman(int integer) {
 
-        int d = decimal;
+        int d = integer;
         String decimalString = Integer.toString(d);
         List<String> invertedRoman = new ArrayList<String>();
         int importance = 0;

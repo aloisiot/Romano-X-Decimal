@@ -7,10 +7,8 @@ public final class Romans {
     private static String[] dezens = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
     private static String[] hundreds = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "DM"};
     private static String[] thousands = {"", "M", "MM", "MMM"};
-    
-    private static List<String[]> romansList = new ArrayList<String[]>();
 
-    Romans(){};
+    private static List<String[]> romansList = new ArrayList<String[]>();
 
     public static List<String[]> elements(){
 

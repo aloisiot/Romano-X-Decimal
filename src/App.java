@@ -14,6 +14,6 @@ public final class App {
 
         String result = Converter.toRoman(decimal);
 
-        System.out.printf("O decimal " + decimal +" convertico em algarismos romanos resulta em: " + result + "\n\n");
+        System.out.printf("O decimal " + decimal +" convertico para algarismos romanos resulta em: " + result + "\n\n");
     }
 }

@@ -1,11 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Converter {
+public final class Converter {
 
     private static List<String[]> romansLists = Romans.elements();
-
-    Converter(){}
 
     public static String toRoman(int decimal) {
 

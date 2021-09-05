@@ -34,60 +34,8 @@ public final class Converter {
         return roman;
     }
 
+    // Em desenvolvimento
     public static int romanToInteger(String roman){
-
-        int result = 0;
-        String romanString = roman;
-        String subString = new String();
-        int currentIndexAtSubString = 3;
-
-        if(romanString.length() <= currentIndexAtSubString)
-            currentIndexAtSubString = romanString.length() - 1;
-        
-        
-        while(romanString.length() > 0){
-
-            subString = "";
-            for(int x = 0; x <= currentIndexAtSubString; x++){
-                subString += romanString.charAt(x);
-            }
-            
-            for(int importance = romansLists.size() - 1; importance >= 0; importance--){
-
-                for(int j = romansLists.get(importance).length - 1; j >= 0 ; j--){
-                    
-                    if(subString.equals(romansLists.get(importance)[j])){
-                        
-                        String oldString = romanString;
-                        romanString = "";
-                        
-                        for( int i = subString.length(); i < oldString.length(); i++){
-                            
-                            romanString += oldString.charAt(i);
-                            
-                        }
-                        
-                        result += j * Math.pow(10, importance);
-
-                        currentIndexAtSubString = 3;
-                        if(romanString.length() <= currentIndexAtSubString)
-                            currentIndexAtSubString = romanString.length();
-                        
-                    }  else if(j == 0 && importance == 0){
-    
-                        currentIndexAtSubString--;
-                        
-                    }
-                }
-
-            }            
-            
-        }
-        
-        return result;
-    }
-
-    public static int romanToInteger2(String roman){
         String s = roman;
 
         int result= 0;
@@ -139,6 +87,60 @@ public final class Converter {
             
         }
 
+        return result;
+    }
+
+    // Ineficas (primeira solução)
+    public static int romanToIntegerDep(String roman){
+
+        int result = 0;
+        String romanString = roman;
+        String subString = new String();
+        int currentIndexAtSubString = 3;
+
+        if(romanString.length() <= currentIndexAtSubString)
+            currentIndexAtSubString = romanString.length() - 1;
+        
+        
+        while(romanString.length() > 0){
+
+            subString = "";
+            for(int x = 0; x <= currentIndexAtSubString; x++){
+                subString += romanString.charAt(x);
+            }
+            
+            for(int importance = romansLists.size() - 1; importance >= 0; importance--){
+
+                for(int j = romansLists.get(importance).length - 1; j >= 0 ; j--){
+                    
+                    if(subString.equals(romansLists.get(importance)[j])){
+                        
+                        String oldString = romanString;
+                        romanString = "";
+                        
+                        for( int i = subString.length(); i < oldString.length(); i++){
+                            
+                            romanString += oldString.charAt(i);
+                            
+                        }
+                        
+                        result += j * Math.pow(10, importance);
+
+                        currentIndexAtSubString = 3;
+                        if(romanString.length() <= currentIndexAtSubString)
+                            currentIndexAtSubString = romanString.length();
+                        
+                    }  else if(j == 0 && importance == 0){
+    
+                        currentIndexAtSubString--;
+                        
+                    }
+                }
+
+            }            
+            
+        }
+        
         return result;
     }
 

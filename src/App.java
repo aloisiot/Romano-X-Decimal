@@ -1,19 +1,16 @@
-import java.util.Scanner;
-
 public final class App {
 
     public static void main(String[] args) throws Exception {
 
-        int integer;
-
-        System.out.println("\nDigite um número entre 1 e 3999 para que seja convertido em algarismos romano.\n");
         
-        Scanner scanner = new Scanner(System.in);
-        integer=scanner.nextInt();
-        scanner.close();
+        for(int i = 1; i < 4000; i++){
 
-        String result = Converter.toRoman(integer);
+            String roman = Converter.integerToRoman(i);
 
-        System.out.printf("O integer " + integer +" convertico para algarismos romanos resulta em: " + result + "\n\n");
+            System.out.printf("%n%d = %s", i, roman);
+        }
+
+        System.out.println("\n\n");
     }
+
 }

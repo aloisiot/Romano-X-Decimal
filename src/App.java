@@ -6,7 +6,7 @@ public final class App {
 
         for(int i = 1; i < 4000; i++){
 
-            String roman = Converter.integerToRoman(i);
+            String roman = Converter.decimalToRoman(i);
 
             System.out.printf("%n%d = %s", i, roman);
         }
@@ -44,13 +44,13 @@ public final class App {
             case 1:
                 System.out.println("Insira um número inteiro entre 1 e 3999:");
                 integer = input.nextInt();
-                System.out.printf("Inteiro: %d \nRomano: %s", integer, Converter.integerToRoman(integer));
+                System.out.printf("Inteiro: %d \nRomano: %s", integer, Converter.decimalToRoman(integer));
                 break;
 
             case 2:
                 System.out.println("Insira um número romano entre 1 e 3999 (todos os caracters devem estar em maiúsculo):");
                 roman = input.next();
-                System.out.printf("Romano: %s \nInteiro: %d", roman, Converter.romanToInteger(roman));
+                System.out.printf("Romano: %s \nInteiro: %d", roman, Converter.romanToDecimal(roman));
                 break;
 
             case 3:

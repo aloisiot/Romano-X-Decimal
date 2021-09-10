@@ -1,13 +1,23 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe de conversção de representações numéricas.
+ * 
+ * Possui métodos que convertem um numero romano em seu decimal equivelente e vice-versa 
+ */
 public final class Converter {
 
     private static List<String[]> romansLists = Romans.elements();
     
-    public static String integerToRoman(int integer) {
+    /**
+     * Converte um numero expresso decimal para seu equivalente em algarismo romano.
+     * @param decimal Representação decimal de um número a ser convertido para romano.
+     * @return
+     */
+    public static String decimalToRoman(int decimal) {
         
-                int d = integer;
+                int d = decimal;
                 String decimalString = Integer.toString(d);
                 List<String> invertedRoman = new ArrayList<String>();
                 int importance = 0;
@@ -34,8 +44,13 @@ public final class Converter {
         return roman;
     }
 
-    // Em desenvolvimento
-    public static int romanToInteger(String roman){
+    // Simplificado e mais eficas.
+    /**
+     * Converte um numero expresso em algarismo romano para seu decimal equivalente.
+     * @param roman Representação romana de um número a ser convertido para decimal.
+     * @return Decimal equivalente ao romano recebido como parãmetro.
+     */
+    public static int romanToDecimal(String roman){
         String s = roman;
 
         int result= 0;
@@ -90,8 +105,13 @@ public final class Converter {
         return result;
     }
 
-    // Ineficas (primeira solução)
-    public static int romanToIntegerDep(String roman){
+    // Ineficas  e mais complexo(primeira solução)
+    /**
+     * Converte um numero expresso em algarismo romano para seu decimal equivalente.
+     * @param roman Representação de um número em romano a ser convertido para decimal.
+     * @return Decimal equivalente ao romano recebido como parãmetro.
+     */
+    public static int romanToDecimalDep(String roman){
 
         int result = 0;
         String romanString = roman;

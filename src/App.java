@@ -32,7 +32,7 @@ public final class App {
             
             opt = input.nextInt();
 
-            if( 0 < opt || opt > 3)
+            if( 0 < opt && opt < 4)
                 isValid = true;
             else
                 System.out.println("OPÇÃO INVÁLIDA!");
@@ -44,13 +44,13 @@ public final class App {
             case 1:
                 System.out.println("Insira um número inteiro entre 1 e 3999:");
                 integer = input.nextInt();
-                System.out.printf("Inteiro: %d \nRomano: %s", integer, Converter.decimalToRoman(integer));
+                System.out.printf("\nInteiro: %d \nRomano: %s", integer, Converter.decimalToRoman(integer));
                 break;
 
             case 2:
                 System.out.println("Insira um número romano entre 1 e 3999 (todos os caracters devem estar em maiúsculo):");
                 roman = input.next();
-                System.out.printf("Romano: %s \nInteiro: %d", roman, Converter.romanToDecimal(roman));
+                System.out.printf("\nRomano: %s \nInteiro: %d", roman, Converter.romanToDecimal(roman));
                 break;
 
             case 3:

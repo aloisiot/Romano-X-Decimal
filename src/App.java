@@ -48,7 +48,7 @@ public final class App {
                 break;
 
             case 2:
-                System.out.println("Insira um número romano entre 1 e 3999 (todos os caracters devem estar em maiúsculo):");
+                System.out.println("Insira um número romano entre I e MMMCMXCIX (todos os caracters devem estar em maiúsculo):");
                 roman = input.next();
                 System.out.printf("\nRomano: %s \nInteiro: %d", roman, Converter.romanToDecimal(roman));
                 break;

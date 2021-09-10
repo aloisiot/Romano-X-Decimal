@@ -13,7 +13,7 @@ public final class Converter {
     /**
      * Converte um numero expresso decimal para seu equivalente em algarismo romano.
      * @param decimal Representação decimal de um número a ser convertido para romano.
-     * @return
+     * @return  Romano equivalente ao decimal recebido como parãmetro.
      */
     public static String decimalToRoman(int decimal) {
         

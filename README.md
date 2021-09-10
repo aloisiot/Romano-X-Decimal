@@ -1,5 +1,5 @@
-# Decimal para Algarismos Romanos
+# Decimal X Romanos
 
-## Programa para converção de número inteiro em algarismos romanos
+## Programa para converção de números decimais em algarismos romanos ou vice-versa
 
 Linguagem: Java
